@@ -33,11 +33,14 @@ the existing ones.
 
 In order for the `push` API so be usable, the *dataLayer* must first be
 declared as an array, the GTM JavaScript snippet inserted at the
-top of the body will declare it for us.
+top of the body will declare it for you.
 
-This initial declaration must occur before snippet. Since the snippet
-must appear at the very top of the body, then the *dataLayer* declaration
-must be the very first item in the body.
+If your *tags* need to fire when pages load, but need information beyond URL
+and referrer, you may need to define the *dataLayer* and pushes information to
+it. Add this code above the container snippet so that the data layer information
+is available on page load. Note that every page must have the code to create a
+*dataLayer* and push information to it; the *dataLayer* does not persist across
+pages.
 
 ## Contributing
 

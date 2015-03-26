@@ -12,10 +12,6 @@ module Rack
       it 'adds the container snippet after body tag' do
         expect(subject).to match(%r[<body.*?>.*#{tracker_id}.*Works!<\/body>]m)
       end
-
-      it 'includes the dataLayer declaration' do
-        expect(subject).to include('dataLayer = []')
-      end
     end
 
     context 'for a text/html response with uppercase html tags' do
