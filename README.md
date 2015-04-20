@@ -19,7 +19,7 @@ And then execute:
 
 Add this line to your application's config/application.rb:
 
-    config.middleware.use 'Rack::GoogleTagManager', tacker: 'GTM-XXXXXX'
+    config.middleware.use 'Rack::GoogleTagManager', tracker: 'GTM-XXXXXX'
 
 To pass inforamtion to GTM from your application you can do it with a JavaScript
 array called *dataLayer*. There are two ways to use it:
