@@ -2,7 +2,7 @@ require 'rack'
 
 module Rack
   class GoogleTagManager
-    def initialize(app, tracker: tracker)
+    def initialize(app, tracker: nil)
       @app, @tracker = app, tracker
     end
 
